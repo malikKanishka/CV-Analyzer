@@ -1,58 +1,63 @@
-<!-- templates/ats.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ATS Score Analyzer</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>ATS Score Analyzer</h1>
-
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <ul class="flashes">
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
-
-        <form method="POST" enctype="multipart/form-data">
-            <label for="job_description">Paste Job Description:</label>
-            <textarea name="job_description" id="job_description" required></textarea>
+        <form method="POST" enctype="multipart/form-data" class="form-section">
+            <label for="job_description">Job Description:</label>
+            <textarea id="job_description" name="job_description" rows="5" placeholder="Paste the job description here..." required></textarea>
 
             <label for="resume">Upload Resume (PDF):</label>
-            <input type="file" name="resume" id="resume" accept="application/pdf" required>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
 
             <button type="submit">Analyze</button>
         </form>
 
-        {% if match_percentage is defined %}
-        <hr>
-        <h2>Analysis Results</h2>
-        <p><strong>Match Percentage:</strong> {{ match_percentage|round(2) }}%</p>
-        <img src="data:image/png;base64,{{ chart_url }}" alt="Match Pie Chart">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
 
-        <h3>Strong Points (Repeated Skills)</h3>
-        <ul>
-            {% for term, count in strong_points.items() %}
-                <li>{{ term }}: {{ count }} times</li>
-            {% endfor %}
-        </ul>
+        {% if chart_url %}
+        <div class="results">
+            <h2>Analysis Results</h2>
+            <p><strong>Match Percentage:</strong> {{ match_percentage|round(2) }}%</p>
 
-        <h3>Weak Points (Missing Skills)</h3>
-        <ul>
-            {% for term in weak_points %}
-                <li>{{ term }}</li>
-            {% endfor %}
-        </ul>
+            <img src="data:image/png;base64,{{ chart_url }}" alt="Match Chart" class="chart">
+
+            <h3>Matched Keywords</h3>
+            {% if matched_terms %}
+                <ul>
+                    {% for keyword in matched_terms %}
+                        <li>{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No keywords matched.</p>
+            {% endif %}
+
+            <h3>Missing Keywords</h3>
+            {% if unmatched_terms %}
+                <ul>
+                    {% for keyword in unmatched_terms %}
+                        <li>{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>All keywords matched.</p>
+            {% endif %}
+        </div>
         {% endif %}
-
     </div>
 </body>
 </html>
-
-<!-- static/style.css -->
