@@ -1,77 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
     margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1, h2, h3 {
+    padding: 0;
     color: #333;
 }
 
-form {
-    margin-top: 20px;
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+h1, h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 textarea, input[type="file"] {
     width: 100%;
-    margin-top: 5px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ccd6dd;
+    border-radius: 6px;
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
+    padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-.flashes li {
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
-    list-style: none;
+.flash-messages {
+    margin-bottom: 20px;
 }
 
-.flashes li.success {
-    background-color: #d4edda;
-    color: #155724;
+.flash {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.flashes li.warning {
-    background-color: #fff3cd;
-    color: #856404;
+.flash.success {
+    background-color: #dff0d8;
+    color: #3c763d;
 }
 
-.flashes li.danger {
-    background-color: #f8d7da;
-    color: #721c24;
+.flash.warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
 }
 
-.flashes li.info {
-    background-color: #d1ecf1;
-    color: #0c5460;
+.flash.danger {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.chart {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
 }
