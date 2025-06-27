@@ -64,7 +64,7 @@ BAD_KEYWORDS = {
         "self", "relevant", "tata", "life", "dynamic", "driven", "motivated", "fast-paced"
     }
 
- # Alias mapping for common tech terms
+ # 🔁 Alias mapping for common tech terms
 ALIAS_MAP = {
         "react.js": {"reactjs", "react js"},
         "reactjs": {"react.js", "react js"},
@@ -118,7 +118,7 @@ def find_keyword_presence(pdf_path, keywords):
     unmatched = set(keywords)
 
     try:
-        # Extract full resume text from PDF
+        # 📄 Extract full resume text from PDF
         full_text = ""
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
@@ -126,7 +126,7 @@ def find_keyword_presence(pdf_path, keywords):
                 if page_text:
                     full_text += page_text + " "
 
-        # Process with spaCy
+        # 🧠 Process with spaCy
         doc = nlp(full_text.lower())
 
         # Create clean set of lemmatized tokens from resume
@@ -135,11 +135,11 @@ def find_keyword_presence(pdf_path, keywords):
             if not token.is_stop and not token.is_punct and len(token.text.strip()) > 2
         )
 
-        # For each keyword in JD
+        # 🔍 For each keyword in JD
         for keyword in keywords:
             keyword_clean = keyword.strip().lower()
 
-            # Skip unwanted keywords
+            # 🛑 Skip unwanted keywords
             if (
                 keyword_clean in BAD_KEYWORDS
                 or len(keyword_clean) < 3
@@ -148,14 +148,14 @@ def find_keyword_presence(pdf_path, keywords):
             ):
                 continue
 
-            # Generate alias variations for this keyword
+            # 🔁 Generate alias variations for this keyword
             aliases = {keyword_clean}
             for base, variants in ALIAS_MAP.items():
                 if keyword_clean == base or keyword_clean in variants:
                     aliases.update(variants)
                     aliases.add(base)
 
-            # Try to match with any alias form
+            # 🔄 Try to match with any alias form
             found_match = False
             for token_text in lemmatized_tokens:
                 # Check partial match
