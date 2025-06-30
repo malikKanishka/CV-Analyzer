@@ -1,0 +1,212 @@
+{
+    "GENERIC_NOUNS": [
+        "candidate", "employee", "applicant", "individual", "person", "people",
+        "company", "organization", "department", "team", "group", "firm", "business", "office", "employer", "manager", "supervisor",
+        "experience", "ability", "knowledge", "skill", "competence", "understanding", "background", "expertise", "capacity",
+        "role", "position", "responsibility", "requirement", "qualification", "title", "career", "job", "opportunity", "function", "vacancy", "opening", "duty", "designation",
+        "environment", "culture", "workplace", "setting", "location", "field", "area", "domain", "context", "scene", "place",
+        "task", "process", "activity", "operation", "workflow", "procedure", "step", "effort", "execution", "initiative",
+        "project", "assignment", "program", "plan", "goal", "objective", "agenda", "strategy",
+        "communication", "discussion", "conversation", "presentation", "meeting", "message", "dialogue", "interaction",
+        "time", "schedule", "deadline", "period", "duration", "shift", "moment", "hour", "timeline",
+        "tool", "platform", "framework", "system", "software", "hardware", "technology", "stack", "interface", "solution",
+        "value", "success", "growth", "support", "service", "result", "trend", "focus", "opinion", "insight", "resource", "asset", "benefit", "impact", "output", "contribution",
+        "leadership", "teamwork", "collaboration", "integrity", "motivation", "dedication", "commitment", "passion", "drive", "ambition", "attitude",
+        "creativity", "innovation", "vision", "mission", "target",
+        "feedback", "suggestion", "recommendation", "direction", "guidance", "mentorship",
+        "ownership", "responsiveness", "accountability", "availability", "punctuality", "reliability",
+        "efficiency", "productivity", "effectiveness", "accuracy", "attention", "quality",
+        "priority", "item", "matter", "detail", "aspect", "factor",
+        "method", "approach", "technique", "tactic",
+        "model", "structure", "outline", "template", "document", "record", "file",
+        "data", "information", "content", "input", "statistic", "metric",
+        "budget", "cost", "expense", "investment", "milestone",
+        "phase", "stage", "cycle", "level", "status", "rank",
+        "speech", "statement", "announcement", "report", "brief",
+        "update", "email", "call", "note", "memo", "alert", "reminder",
+        "relationship", "connection", "network", "contact", "engagement",
+        "climate", "atmosphere", "fit", "alignment", "expectation",
+        "standard", "norm", "guideline", "rule", "policy", "compliance", "regulation"
+      ],
+      "BAD_KEYWORDS": [
+        "you", "your", "that", "those", "familiarity", "proficiency", "completion",
+        "knowledge", "experience", "ability", "certifications", "medium", "basic", "ideas",
+        "self", "relevant", "tata", "life", "dynamic", "driven", "motivated", "fast-paced",
+        "hardworking", "passionate", "responsible", "ambitious", "dedicated", "eager",
+        "interested", "adaptable", "energetic", "goal-oriented", "results-driven", "team-player",
+        "excellent", "strong", "solid", "keen", "capable", "dependable", "reliable", "enthusiastic",
+        "quick", "effective", "efficient", "smart", "confident", "curious", "creative",
+        "collaborative", "independent", "organized", "punctual", "honest", "flexible",
+        "willing", "constructive", "hands-on", "supportive", "available", "present", "evolving",
+        "synergistic", "professional", "innovative", "multi-tasking", "outgoing"
+      ],      
+      "ALIAS_MAP": {
+        "react.js": ["reactjs", "react js"],
+        "reactjs": ["react.js", "react js"],
+        "react js": ["react.js", "reactjs"],
+      
+        "javascript": ["js"],
+        "js": ["javascript"],
+      
+        "typescript": ["ts"],
+        "ts": ["typescript"],
+      
+        "nlp": ["natural language processing"],
+        "natural language processing": ["nlp"],
+      
+        "git/github": ["git", "github"],
+        "git": ["git/github", "github"],
+        "github": ["git/github", "git"],
+      
+        "machine learning": ["ml", "ml systems", "machine learning models"],
+        "ml": ["machine learning", "machine learning models", "ml systems"],
+        "ml systems": ["machine learning", "ml"],
+        "machine learning models": ["machine learning", "ml"],
+      
+        "deep learning": ["dl", "neural networks"],
+        "dl": ["deep learning", "neural networks"],
+        "neural networks": ["deep learning", "dl"],
+      
+        "data science": ["data scientist", "data sciences", "data analyst"],
+        "data scientist": ["data science", "data sciences", "data analyst"],
+        "data sciences": ["data science", "data scientist"],
+        "data analyst": ["data science", "data scientist"],
+      
+        "ai": ["artificial intelligence", "ai systems"],
+        "artificial intelligence": ["ai", "ai systems"],
+        "ai systems": ["ai", "artificial intelligence"],
+      
+        "devops": ["development operations", "devops engineering"],
+        "development operations": ["devops", "devops engineering"],
+        "devops engineering": ["devops", "development operations"],
+      
+        "ux": ["user experience"],
+        "user experience": ["ux"],
+      
+        "ui": ["user interface"],
+        "user interface": ["ui"],
+      
+        "cloud": ["cloud computing", "cloud platforms", "cloud services"],
+        "cloud computing": ["cloud", "cloud platforms", "cloud services"],
+        "cloud platforms": ["cloud", "cloud computing", "cloud services"],
+        "cloud services": ["cloud", "cloud computing", "cloud platforms"],
+      
+        "sql": ["structured query language"],
+        "structured query language": ["sql"],
+      
+        "etl": ["extract transform load", "data pipelines"],
+        "extract transform load": ["etl", "data pipelines"],
+        "data pipelines": ["etl", "extract transform load"],
+      
+        "cv": ["resume"],
+        "resume": ["cv"],
+      
+        "rdms": ["relational database"],
+        "relational database": ["rdms"],
+      
+        "docker": ["containerization", "containers"],
+        "containerization": ["docker", "containers"],
+        "containers": ["docker", "containerization"],
+      
+        "kubernetes": ["k8s"],
+        "k8s": ["kubernetes"],
+      
+        "api": ["application programming interface", "rest api", "web api"],
+        "application programming interface": ["api", "rest api", "web api"],
+        "rest api": ["api", "application programming interface"],
+        "web api": ["api", "application programming interface"],
+      
+        "aws": ["amazon web services"],
+        "amazon web services": ["aws"],
+      
+        "gcp": ["google cloud platform"],
+        "google cloud platform": ["gcp"],
+      
+        "azure": ["microsoft azure"],
+        "microsoft azure": ["azure"],
+      
+        "pytorch": ["torch"],
+        "torch": ["pytorch"],
+      
+        "tensorflow": ["tf"],
+        "tf": ["tensorflow"],
+      
+        "excel": ["microsoft excel"],
+        "microsoft excel": ["excel"],
+      
+        "power bi": ["powerbi"],
+        "powerbi": ["power bi"],
+      
+        "sql server": ["microsoft sql server"],
+        "microsoft sql server": ["sql server"],
+      
+        "postgres": ["postgresql"],
+        "postgresql": ["postgres"],
+      
+        "html": ["hypertext markup language"],
+        "hypertext markup language": ["html"],
+      
+        "css": ["cascading style sheets"],
+        "cascading style sheets": ["css"],
+      
+        "vs code": ["visual studio code"],
+        "visual studio code": ["vs code"],
+      
+        "linux": ["unix"],
+        "unix": ["linux"],
+      
+        "dashboards": ["data dashboards", "interactive dashboards"],
+        "interactive dashboards": ["dashboards"],
+        "data dashboards": ["dashboards"],
+      
+        "pipelines": ["data pipelines"],
+      
+        "kibana": ["elasticsearch", "elastic stack"],
+        "elasticsearch": ["kibana", "elastic stack"],
+        "elastic stack": ["kibana", "elasticsearch"],
+      
+        "bi tools": ["business intelligence", "tableau", "power bi"],
+        "business intelligence": ["bi tools"],
+        "tableau": ["bi tools"],
+      
+        "jupyter": ["jupyter notebook", "ipynb"],
+        "jupyter notebook": ["jupyter", "ipynb"],
+        "ipynb": ["jupyter", "jupyter notebook"],
+      
+        "erp": ["enterprise resource planning"],
+        "enterprise resource planning": ["erp"],
+      
+        "scrum": ["agile", "agile scrum"],
+        "agile": ["scrum", "agile scrum"],
+        "agile scrum": ["scrum", "agile"],
+      
+        "qa": ["quality assurance", "testing", "software testing"],
+        "quality assurance": ["qa", "software testing"],
+        "testing": ["qa", "software testing"],
+        "software testing": ["qa", "testing"],
+      
+        "seo": ["search engine optimization"],
+        "search engine optimization": ["seo"],
+      
+        "firebase": ["google firebase"],
+        "google firebase": ["firebase"],
+      
+        "mongodb": ["mongo", "nosql database"],
+        "mongo": ["mongodb"],
+        "nosql database": ["mongodb"],
+      
+        "ci/cd": ["continuous integration", "continuous deployment"],
+        "continuous integration": ["ci/cd"],
+        "continuous deployment": ["ci/cd"],
+      
+        "bash": ["shell scripting"],
+        "shell scripting": ["bash"],
+            
+        "flask": ["flask framework"],
+        "flask framework": ["flask"],
+      
+        "django": ["django framework"],
+        "django framework": ["django"]
+      }      
+  }
+  
